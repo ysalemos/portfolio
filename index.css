@@ -1,0 +1,474 @@
+/* cores: #0D0D0D (preto) | #D9B504 (mostarda) | #7F25D9 (roxo) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    color: #0D0D0D;
+  }
+  
+  header {
+    height: 10vh;
+  }
+  
+  a {
+    text-decoration:none;
+  }
+  
+  /* BOTÃO HOME ------------------------------------------------------------------ */
+  
+  .home a {
+    display: flex;
+    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+    padding: 0.5em;
+    margin: 0.5em;
+    
+    color: white;
+    background-color:#0D0D0D;
+    opacity: 50%;
+    transition: 1s;
+  }
+  
+  .home a:hover {
+    opacity: 100%;
+  }
+  
+  /* MENU ------------------------------------------------------------------ */
+  
+  .menu {
+    width: 80%;
+    
+    position: absolute;
+    top: 1em;
+    left: 10%;
+    right: 10%;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a{
+    font-weight: bold;
+    
+    color: #0D0D0D;
+    background-color: white;
+    border-bottom: 3px solid #0D0D0D;
+    transition: 0.1s;
+    padding: 0.5em;
+  }
+  
+  .menu a:hover{
+    background-color: #D9B504;
+  }
+  
+  /* DESTAQUE ------------------------------------------------------------------ */
+  
+  .cabecalho {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-title,
+  .site-subtitle {
+    text-align: center;
+    background-color: white;
+    /* superior | direita | inferior | esquerda */
+    padding: 0.5em;
+    border: 2px solid #0D0D0D;
+    box-shadow: 5px -5px 0 0 #0D0D0D;
+    transition: 0.1s;
+  }
+  
+  .site-title:hover,
+  .site-subtitle:hover {
+    background-color: #D9B504; 
+  }
+  
+  .site-subtitle {
+    font-weight: 400;
+    font-size: 1em;
+    margin-top: 0.5em;
+  }
+  
+  /* SEÇÃO SOBRE ------------------------------------------------------------------ */
+  
+  .section-sobre {
+    display: grid;
+    grid-template-columns: 100%;
+      
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    
+    padding: 1em 5% 2em 5%;
+  }
+  
+  .apresentacao {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .apresentacao-foto img{
+    width: 80%;
+  }
+  
+  .section-sobre i,
+  .section-educativas h3 i,
+  .section-contato h2 i{
+    padding-right: 0.5em;
+  }
+  
+  .section-sobre h2 {
+    background-color: #7F25D9;
+    padding: 0 0.3em;
+    display: inline-block;
+  }
+  
+  .section-sobre p {
+    padding: 2em 0.3em;
+    text-align: justify;
+  }
+  
+  .section-sobre p a {
+    font-weight: bold;
+    line-height: 1.5;
+    color:#0D0D0D;
+    background-color: #7F25D9;
+  }
+  
+  .section-sobre p a:hover {
+    background-color: #D9B504;
+  }
+  
+  /* SEÇÃO EDUCATIVAS ------------------------------------------------------------------ */
+  
+  .section-educativas {
+    padding: 0 5% 5em 5%;
+  }
+  
+  .section-educativas h3 {
+    font-size: 1.3em;
+    padding: 0 0.3em;
+    display: inline-block;
+    border-bottom: 3px solid #7F25D9;
+  }
+  
+  .section-educativas h4 {
+    font-size: 1.3em;
+    padding: 0 0.3em;
+    display: inline-block;
+    border-bottom: 3px solid #7F25D9;
+    color: #0D0D0D;
+  }
+  
+  .section-educativas h4:hover {
+    border-bottom: 3px solid #D9B504;
+  }
+  
+  .section-educativas figcaption {
+    font-weight: normal;
+    color: #0D0D0D; 
+  }
+  
+  .grid-links {
+    display: grid;
+    padding-top: 2em;
+    gap: 2em;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 200px;
+  }
+  
+  
+  /* SOBREPOSIÇÃO ------------------------------------------------------------------ */
+  
+  .sobreposicao {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    visibility: hidden;
+    opacity: 0;
+    
+    background: #fff;
+    
+    overflow: auto;
+  }
+  
+  .sobreposicao:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .content h2 {
+    display: inline-block;
+    padding: 0 0.3em;
+    background-color: #D9B504;
+  }
+  
+  .content p {
+    text-align: justify;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  
+  .content a {
+    padding: 0 0.3em;
+    
+    font-weight: bold;
+    line-height: 1.5;
+    
+    color: #0D0D0D;
+    background-color: #D9B504;
+  }
+  
+  .content a:hover {
+    background-color: #7F25D9;
+  }
+  
+  .content .img-sobreposicao {
+    position:relative;
+    
+    width: 17em;
+    height: 12em;
+    object-fit: cover;
+    padding-top: 1em;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sobreposicao .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    transition: all 200ms;
+    
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0D0D0D;
+  }
+  
+  .sobreposicao .close:hover {
+    color: #D9B504;
+  }
+  
+  .sobreposicao .content {
+    margin: 10%;
+  }
+  
+  /* SEÇÃO PROJETOS ------------------------------------------------------------------ */
+  
+  .section-projetos {
+    padding-top: 4em;
+    background-color: #7F25D9;
+    
+    display: grid;
+    justify-content: center;
+  }
+  
+  .gif-projetos{
+    justify-content: center;
+  }
+  
+  .frase-projetos {
+    visibility: hidden;
+  }
+  
+  /* SEÇÃO PROJETOS-SOBREPOSIÇÃO ------------------------------------------------------------------ */
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text-projetos {
+    color: #0D0D0D;
+    background-color: #D9B504;
+    
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    
+    padding: 0.5em;
+    width: 100%;
+  }
+  
+  .text-projetos a:hover{
+    background-color: #D9B504;
+  }
+  
+  /* CONTATO ------------------------------------------------------------------ */
+  
+  .section-contato {
+    background-color: #0D0D0D;
+  }
+  
+  .redes-icones {
+    padding: 1em 5%;
+    
+    display: grid;
+    gap: 0.5em;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(3,70px);
+  }
+  
+  .redes-icones a{
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s;
+  }
+  
+  .redes-icones a:hover {
+    color: #D9B504;
+  }
+  
+  /* RESPONSIVO ------------------------------------------------------------------ */
+  
+  /* 450 */
+  
+  @media (min-width: 450px) {
+    .section-sobre div {
+    grid-template-columns: 200px;  
+    }
+    .section-projetos div {
+    grid-template-columns: 300px;
+    }
+   .img-projetos {
+      height: 200px;
+      width: 300px;
+    }
+    .redes-icones {
+    grid-template-columns: repeat(4,70px);
+    }
+  }
+  
+  /* 650 */
+  
+  @media (min-width: 650px) {
+    .content .img-sobreposicao {
+    width: 30em;
+    height: 21em;
+    }
+   
+    .section-educativas div,
+    .section-projetos div {
+    grid-template-columns: repeat(2, 300px);
+    }
+    
+    .redes-icones {
+    grid-template-columns: repeat(6,70px);
+    }
+  }
+  
+  /* 750 */
+  
+  @media (min-width: 750px) {
+    .section-sobre {
+      grid-template-columns: repeat(2, 50%);
+    }
+    
+    .apresentacao-foto {
+      text-align: right;
+    }
+    
+    .section-projetos {
+      gap: 1em;
+      grid-template-columns: repeat(2, 300px);
+    }
+  
+    .frase-projetos {
+      visibility: visible;
+      
+      text-align: right;
+      justify-content: center;
+      
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    
+    .frase-projetos p {
+      font-size: 3em;
+    }
+    
+    .frase-projetos h2 {
+      font-size: 2em;
+    }
+  }
+  
+  /* 1000 */
+  
+  @media (min-width: 1000px) {
+    .section-sobre,
+    .section-educativas,
+    .redes-icones {
+    padding-left: 10%;
+    padding-right: 10%;
+    }
+    .content .img-sobreposicao {
+    width: 55em;
+    height: 47em;
+    }
+    
+    .section-educativas div,
+    .section-projetos div {
+    grid-template-columns: repeat(3, 300px);
+    }
+  }
